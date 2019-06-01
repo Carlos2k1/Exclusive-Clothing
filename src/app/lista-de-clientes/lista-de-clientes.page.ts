@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from '../model/cliente';
+import { cliente } from '../model/cliente';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
@@ -12,7 +12,7 @@ import { LoadingController } from '@ionic/angular';
 export class ListaDeClientesPage implements OnInit {
 
  
-  listaDeClientes: Cliente[] = [];
+  listaDeClientes: cliente[] = [];
   firestore = firebase.firestore();
   settings = { timestampsInSnapshots: true };
 
@@ -25,7 +25,7 @@ export class ListaDeClientesPage implements OnInit {
     this.getList();
   }
 
-  viewCliente(obj: Cliente) {
+  viewCliente(obj: cliente) {
     this.router.navigate(['/cliente-view', { 'cliente' : obj.id }]);
 
   }
@@ -36,7 +36,7 @@ export class ListaDeClientesPage implements OnInit {
     var ref = firebase.firestore().collection("cliente");
     ref.get().then(query => {
       query.forEach(doc => {
-        let c = new Cliente();
+        let c = new cliente();
         c.setDados(doc.data());
         c.id = doc.id;
         this.listaDeClientes.push(c);
@@ -47,7 +47,7 @@ export class ListaDeClientesPage implements OnInit {
 
   }
 
-  remove(obj: Cliente) {
+  remove(obj: cliente) {
     var ref = firebase.firestore().collection("cliente");
     ref.doc(obj.id).delete()
       .then(() => {

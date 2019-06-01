@@ -56,6 +56,16 @@ const routes: Routes = [
     path: 'login', 
     loadChildren: './login/login.module#LoginPageModule' 
   },
+  { 
+    path: 'roupas', 
+    loadChildren: './roupas/roupas.module#RoupasPageModule' 
+  },
+  { 
+    path: 'cadastrar-roupa', 
+    loadChildren: './cadastrar-roupa/cadastrar-roupa.module#CadastrarRoupaPageModule' 
+  },  { path: 'roupa-view', loadChildren: './roupa-view/roupa-view.module#RoupaViewPageModule' },
+
+
 ];
 
 @NgModule({

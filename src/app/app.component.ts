@@ -52,6 +52,16 @@ export class AppComponent {
       url: '/cadastro-marca',
       icon: 'md-add-circle'
     },
+    {
+      title: 'Cadastrar Peças',
+      url: '/cadastrar-roupa',
+      icon: 'md-add-circle'
+    },
+    {
+      title: 'Roupas',
+      url: '/roupas',
+      icon: 'md-add-circle'
+    },
   ];
   //cadastro-de-clientes
 
@@ -75,13 +85,13 @@ export class AppComponent {
     .subscribe(
       user => {
         if (user) {
-          this.router.navigate(['/lista-de-clientes']);
+          this.router.navigate(['/home']);
           } else {
-            this.router.navigate(['/home']);
+            this.router.navigate(['/login']);
           }
       },
       () => {
-        this.router.navigate(['/lista-de-clientes']);
+        this.router.navigate(['/home']);
       }
     );
 

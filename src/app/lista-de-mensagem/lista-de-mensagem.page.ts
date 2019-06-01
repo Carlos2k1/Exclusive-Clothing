@@ -66,25 +66,5 @@ export class ListaDeMensagemPage implements OnInit {
     });
     await loading.present();
   }
-
-
-
-
-
-
-
-  async openPopover(ev: Event){
-    const popover = await this.popoverController.create({
-      component: PopoverpesquisaPage,
-      componentProps: {
-        custom_id: this.value
-      },
-      ev: ev
-    });
-    popover.present()
-  }
-
-
-
 }
 

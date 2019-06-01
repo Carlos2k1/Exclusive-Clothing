@@ -1,9 +1,11 @@
-export class Cliente{
+export class cliente{
 
     id: string;
     nome: string;
     telefone: string;
     email: string;
+    endereco: string;
+    cep: string;
 
     constructor(){
     }
@@ -13,5 +15,7 @@ export class Cliente{
         this.nome = obj.nome;
         this.telefone = obj.telefone;
         this.email = obj.email;
+        this.endereco = obj.endereco;
+        this.cep = obj.cep;
     }
 }

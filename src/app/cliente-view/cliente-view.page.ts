@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from '../model/cliente';
+import { cliente } from '../model/cliente';
 import * as firebase from 'firebase';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -12,7 +12,7 @@ import { LoadingController } from '@ionic/angular';
 })
 export class ClienteViewPage implements OnInit {
 
-  cliente: Cliente = new Cliente();
+  cliente: cliente = new cliente();
   id: string;
   firestore = firebase.firestore();
   settings = { timestampsInSnapshots: true };

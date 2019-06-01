@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Cadastrar Roupa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrar()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome da peça</ion-label>
+        <ion-input formControlName="roupa" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Preço</ion-label>
+        <ion-input formControlName="preco" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Modelo</ion-label>
+        <ion-input formControlName="modelo" type="text"></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Marca</ion-label>
+        <ion-input formControlName="marca" type="text"></ion-input> 
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Marca</ion-label>
+          <ion-input formControlName="img" (change)="enviaArquivo($event)"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+  </form>
+
+
+</ion-content>
+
+
+
+
+
+
+<!-- 
+
+  <ion-item>
+        <ion-label floating>CEP</ion-label>
+        <ion-input formControlName="img" type="text"></ion-input> 
+      </ion-item>
+      
+-->
