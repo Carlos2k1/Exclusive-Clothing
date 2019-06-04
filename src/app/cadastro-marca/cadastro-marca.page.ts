@@ -23,6 +23,8 @@ export class CadastroMarcaPage implements OnInit {
 
     this.formGroup = this.formBuilder.group({
       nome: [''],
+      descricao: [''],
+      img: [''],
 
     })
   }

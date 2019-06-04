@@ -27,7 +27,10 @@ export class ListaDeClientesPage implements OnInit {
 
   viewCliente(obj: cliente) {
     this.router.navigate(['/cliente-view', { 'cliente' : obj.id }]);
+  }
 
+  comprar(){
+    this.router.navigate(['/home']);
   }
 
   getList() {

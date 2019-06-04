@@ -11,8 +11,9 @@
     <ion-card  *ngFor="let roupas of listaDeRoupas">
         <ion-card-header>
           
+
+          <img src="{{roupas?.imagem}}">
           <ion-card-title> {{roupas?.roupa}} </ion-card-title>
-          <ion-card-subtitle> {{roupas?.img}} </ion-card-subtitle>
           <ion-card-subtitle> {{roupas?.preco}} </ion-card-subtitle>
           <ion-card-subtitle> {{roupas?.marca}} </ion-card-subtitle>
 
